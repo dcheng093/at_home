@@ -1,37 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_ft.c                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/09 22:07:20 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/09 22:07:20 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/10 21:00:14 by dcheng            #+#    #+#             */
+/*   Updated: 2025/08/10 21:00:14 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	rush(int x, int y);
+#include <stdio.h>
+
+void	ft_ft(int *nbr)
+{
+	*nbr = 42;
+}
 
 int	main(void)
 {
-	rush(5, 3);
-	ft_putchar('\n');
-	rush(5, 1);
-	ft_putchar('\n');
-	rush(1, 1);
-	ft_putchar('\n');
-	rush(1, 5);
-	ft_putchar('\n');
-	rush(4, 4);
-	ft_putchar('\n');
-	rush(123, 42);
-	ft_putchar('\n');
-	rush(1, 0);
-	ft_putchar('\n');
-	rush(0, 1);
-	ft_putchar('\n');
-	rush(0, 0);
-	ft_putchar('\n');
-	rush(-1, -1);
+	int	value;
+
+	ft_ft(&value);
+	printf("%d\n", value);
+	return (0);
 }
+
+

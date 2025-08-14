@@ -35,17 +35,16 @@ void	rush(int x, int y)
 	int	i;
 
 	i = 1;
-	if (x >= 1 && y >= 1)
+	if (x < 1 || y < 1)
+		return ;
+	while (i <= y)
 	{
-		while (i <= y)
-		{
-			if (i == 1)
-				ft_print(x, '/', '*', '\\');
-			else if (i == y)
-				ft_print(x, '\\', '*', '/');
-			else
-				ft_print(x, '*', ' ', '*');
-			i++;
-		}
+		if (i == 1)
+			ft_print(x, '/', '*', '\\');
+		else if (i == y)
+			ft_print(x, '\\', '*', '/');
+		else
+			ft_print(x, '*', ' ', '*');
+		i++;
 	}
 }

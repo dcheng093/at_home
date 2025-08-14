@@ -1,37 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_div_mod.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/09 22:07:20 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/09 22:07:20 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/11 14:15:11 by dcheng            #+#    #+#             */
+/*   Updated: 2025/08/11 18:06:33 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	rush(int x, int y);
+#include <stdio.h>
 
-int	main(void)
+void    ft_div_mod(int a, int b, int *div, int *mod)
 {
-	rush(5, 3);
-	ft_putchar('\n');
-	rush(5, 1);
-	ft_putchar('\n');
-	rush(1, 1);
-	ft_putchar('\n');
-	rush(1, 5);
-	ft_putchar('\n');
-	rush(4, 4);
-	ft_putchar('\n');
-	rush(123, 42);
-	ft_putchar('\n');
-	rush(1, 0);
-	ft_putchar('\n');
-	rush(0, 1);
-	ft_putchar('\n');
-	rush(0, 0);
-	ft_putchar('\n');
-	rush(-1, -1);
+    *div = a / b;
+    *mod = a % b;
 }
+
+/*int    main(void)
+{
+    int    a  = 10;
+    int b = 3;
+    int div;
+    int mod;
+
+    ft_div_mod(a, b, &div, &mod);
+    printf("a : %d, b : %d\n", a, b);
+    printf("div : %d\n", div);
+    printf("mod : %d\n", mod);
+}*/

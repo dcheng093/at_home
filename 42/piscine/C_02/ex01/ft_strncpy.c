@@ -1,37 +1,43 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/09 22:07:20 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/09 22:07:20 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/14 15:27:17 by dcheng            #+#    #+#             */
+/*   Updated: 2025/08/14 15:27:17 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	ft_putchar(char c);
-void	rush(int x, int y);
+#include <stdio.h>
+#include <unistd.h>
+
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
+{
+	int	i;
+
+	i = 0;
+	while (src[i] && i < n)
+	{
+		dest[i] = src[i];
+		i++;
+	}
+	while (i < n)
+	{
+		dest[i] = '\0';
+		i++;
+	}
+	return (dest);
+}
 
 int	main(void)
 {
-	rush(5, 3);
-	ft_putchar('\n');
-	rush(5, 1);
-	ft_putchar('\n');
-	rush(1, 1);
-	ft_putchar('\n');
-	rush(1, 5);
-	ft_putchar('\n');
-	rush(4, 4);
-	ft_putchar('\n');
-	rush(123, 42);
-	ft_putchar('\n');
-	rush(1, 0);
-	ft_putchar('\n');
-	rush(0, 1);
-	ft_putchar('\n');
-	rush(0, 0);
-	ft_putchar('\n');
-	rush(-1, -1);
+	char	dest[] = "Destination";
+	char	src[] = "Source";
+	int	n = 7;
+
+	printf("Dest before : %s\n", dest);
+	ft_strncpy(dest, src, n);
+	printf("Dest after : %s\n", dest);
 }
