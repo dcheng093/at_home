@@ -1,24 +1,16 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 12:14:30 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/07 21:06:09 by dcheng           ###   ########.fr       */
+/*   Created: 2025/09/19 07:23:53 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/19 07:23:53 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
+#include <stddef.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-/*int	main(void)
-{
-	ft_putchar('a');
-	return (0);
-}*/
+void	*ft_memset(void *s, int c, size_t n);

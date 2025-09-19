@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 00:29:20 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/15 00:29:20 by dcheng           ###   ########.fr       */
+/*   Created: 2025/09/02 23:57:35 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/02 23:57:35 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,17 @@
 
 void	ft_print_alphabet(void)
 {
-	char	i;
+	char	alphabet;
 
-	i = 'a';
-	while (i <= 'z')
+	alphabet = 'a';
+	while (alphabet <= 'z')
 	{
-		write(1, &i, 1);
-		i++;
+		write (1, &alphabet, 1);
+		alphabet++;
 	}
-	write(1, '\0', 1);
 }
 
 int	main(void)
 {
 	ft_print_alphabet();
-	return (0);
 }

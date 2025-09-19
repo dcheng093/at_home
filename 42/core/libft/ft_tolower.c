@@ -1,24 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_tolower.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 12:14:30 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/07 21:06:09 by dcheng           ###   ########.fr       */
+/*   Created: 2025/09/19 07:56:21 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/19 07:56:21 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+int	ft_tolower(int c)
 {
-	write(1, &c, 1);
+	if (c >= 65 && c <= 90)
+		return (c + 32);
+	return (c);
 }
-
-/*int	main(void)
-{
-	ft_putchar('a');
-	return (0);
-}*/

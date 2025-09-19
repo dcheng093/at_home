@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 12:14:30 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/07 21:06:09 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/09 21:34:05 by dcheng            #+#    #+#             */
+/*   Updated: 2025/08/09 21:34:05 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_putchar(char c)
 	write(1, &c, 1);
 }
 
-/*int	main(void)
-{
-	ft_putchar('a');
-	return (0);
-}*/
+// int	main(void)
+// {
+// 	ft_putchar('C');
+// 	return (0);
+// }

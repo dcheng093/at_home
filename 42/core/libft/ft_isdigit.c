@@ -1,24 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_isdigit.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 12:14:30 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/07 21:06:09 by dcheng           ###   ########.fr       */
+/*   Created: 2025/09/19 06:35:20 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/19 06:35:20 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_putchar(char c)
+int	ft_isdigit(int c)
 {
-	write(1, &c, 1);
+	return (c >= 48 && c <= 57);
 }
-
-/*int	main(void)
-{
-	ft_putchar('a');
-	return (0);
-}*/

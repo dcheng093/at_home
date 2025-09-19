@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 00:48:38 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/15 00:48:38 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/27 00:43:47 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/02 23:46:29 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,20 +14,17 @@
 
 void	ft_swap(int *a, int *b)
 {
-	int tmp;
-
-	tmp = *a;
+	int	temp;
+	temp = *a;
 	*a = *b;
-	*b = tmp;
+	*b = temp;
 }
 
 int	main(void)
 {
-	int a;
-	int b;
+	int	a = 4;
+	int b = 2;
 
-	a = 25;
-	b = 5;
 	ft_swap(&a, &b);
-	printf("a = %d\nb = %d\n", a, b);
+	printf("%d\n", a);
 }

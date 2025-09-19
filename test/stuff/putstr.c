@@ -1,24 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putchar.c                                       :+:      :+:    :+:   */
+/*   ft_strlen.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 12:14:30 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/07 21:06:09 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/11 20:42:36 by dcheng            #+#    #+#             */
+/*   Updated: 2025/08/11 20:57:17 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <stdio.h>
 #include <unistd.h>
 
-void	ft_putchar(char c)
+int    ft_putstr(char *str)
 {
-	write(1, &c, 1);
+    int    i;
+
+    i = 0;
+    while (str[i] != '\0')
+	{
+		write (1, &str[i], 1);
+		i++;
+	}
+    return (i);
 }
 
-/*int	main(void)
+int    main(void)
 {
-	ft_putchar('a');
-	return (0);
-}*/
+    char    *str = "Hello";
+	
+	ft_putstr(str);
+}

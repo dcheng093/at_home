@@ -1,31 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_reverse_alphabet.c                        :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/07 16:13:13 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/08 10:20:42 by dcheng           ###   ########.fr       */
+/*   Created: 2025/09/19 08:11:31 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/19 08:11:31 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include "libft.h"
 
-void	ft_print_reverse_alphabet(void)
+int	ft_atoi(const char *nptr)
 {
-	char	alphabet;
+	int				i;
+	int				sign;
+	unsigned long	result;
 
-	alphabet = 'z';
-	while (alphabet >= 'a')
+	i = 0;
+	sign = 1;
+	result = 0;
+	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '-')
 	{
-		write(1, &alphabet, 1);
-		alphabet--;
+		sign *= -1;
+		i++;
 	}
+	else if (nptr[i] == '+')
+		i++;
+	while (nptr[i] && (nptr[i] >= '0' && nptr[i] <= '9'))
+	{
+		result = (result * 10) + nptr[i] - 48;
+		i++;
+	}
+	return ((int)result * sign);
 }
-
-/*int	main(void)
-{
-	ft_print_reverse_alphabet();
-	return (0);
-}*/

@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/08/15 00:46:04 by dcheng            #+#    #+#             */
-/*   Updated: 2025/08/15 00:46:04 by dcheng           ###   ########.fr       */
+/*   Created: 2025/08/27 00:36:26 by dcheng            #+#    #+#             */
+/*   Updated: 2025/09/02 23:43:25 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,9 +19,7 @@ void	ft_ft(int *nbr)
 
 int	main(void)
 {
-	int	value;
-
+	int	value = 52;
 	ft_ft(&value);
 	printf("%d\n", value);
-	return (0);
 }
