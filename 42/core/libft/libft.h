@@ -9,3 +9,11 @@
 /*   Updated: 2025/09/19 07:44:59 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#ifndef LIBFT_H
+# define LIBFT_H
+
+# include <stddef.h>
+# include <stdint.h>
+
+#endif

@@ -6,13 +6,12 @@
 /*   By: dcheng <dcheng@student.42kl.edu.my>        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/08/24 18:27:52 by dcheng            #+#    #+#             */
-/*   Updated: 2025/09/02 23:49:01 by dcheng           ###   ########.fr       */
+/*   Updated: 2025/10/07 07:55:27 by dcheng           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 
 char	*ft_strdup(char *src)
 {
@@ -36,10 +35,20 @@ char	*ft_strdup(char *src)
 	return (dup);
 }
 
-int	main(void)
+int main(void)
 {
 	char	*src = "poop";
+	char	*dup = ft_strdup(src);
 
-	printf("my: %s\n", ft_strdup(src));
-	printf("or: %s\n", strdup(src));
+	printf("Before:\n");
+	printf("src: %s\n", src);
+	printf("dup: %s\n", dup);
+
+	dup[0] = 'b';
+
+	printf("\nAfter modifying dup:\n");
+	printf("src: %s\n", src);
+	printf("dup: %s\n", dup);
+
+	free(dup);
 }
